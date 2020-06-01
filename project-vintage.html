@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🚲Vintage Bikes 🚲</title>
+    <style>
+      body {
+        font-family: "Lora", serif;
+        background-color: #73a1b0;
+      }
+      h1 {
+        color: #3d3642;
+        text-align: center;
+      }
+      h2 {
+        color: #ff7e57;
+        text-align: center;
+        font-size: 22px;
+      }
+      p {
+        color: #73a1b0;
+        line-height: 1.5;
+        font-size: 16px;
+      }
+      button {
+        text-align: center;
+        display: block;
+        margin: 20px auto;
+        text-shadow: none;
+        box-shadow: none;
+        background-color: transparent;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-family: "UntitledSans-Medium";
+        cursor: pointer;
+        color: #87806d;
+        font-weight: 600;
+        border: 1.5px solid #87806d;
+        padding: 6px 2px;
+        transition: all 200ms ease-in-out;
+      }
+      img {
+        border: 2px solid #87806d;
+        border-radius: 4px;
+        display: block;
+        margin: 0 auto;
+        max-width: 60%;
+      }
+      hr {
+        color: #87806d;
+        background-color: #87806d;
+        border: 0.75px solid #87806d;
+      }
+      button:hover {
+        color: #ff7e57;
+        border-color: #ff7e57;
+      }
+      .container {
+        background: linear-gradient(white, #eae6da);
+        max-width: 600px;
+        margin: 20px 90px 10px;
+        padding: 0 100px;
+        border: 2px solid #87806d;
+        border-radius: 4px;
+      }
+
+      .footer {
+        text-align: center;
+        color: #3d3642;
+      }
+      .learn-more {
+        text-decoration: none;
+        font-size: 12px;
+        color: #ff7e57;
+      }
+      .learn-more:hover {
+        text-decoration: underline;
+        color: #ff7e57;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Vintage Bicycles</h1>
+      <hr />
+      <h2>
+        <em>
+          Stylish & Inspiring
+        </em>
+      </h2>
+      <img
+        src="https://i.pinimg.com/564x/a5/16/37/a51637e4789a4a08e33176aafa372c91.jpg"
+        alt="bike"
+        width="300px"
+      />
+      <p>
+        All about classic and vintage road bicycles from 60s, 70s and 80s. We
+        are specialized in French and Italian competition bikes with finest
+        steel frames. You might find your dream bicycle here.
+      </p>
+      <strong
+        ><a
+          href="https://www.pinterest.fr/search/pins/?rs=ac&len=2&q=vintage%20bikes&eq=vintage%20b&etslf=9458&term_meta[]=vintage%7Cautocomplete%7C7&term_meta[]=bikes%7Cautocomplete%7C7"
+          target="_blank"
+          class="learn-more"
+          >Go to Pinterest for more inspiration</a
+        ></strong
+      ><br />
+      <p>
+        Bikes made in the period between the early 19th century and before World
+        War II is worthy.
+      </p>
+      <button class="join-button">Join our community</button>
+    </div>
+    <p class="footer">
+      This page was built by
+      <a href="https://github.com/IraPapsheva" target="_blank">
+        Ira
+      </a>
+    </p>
+    <script>
+      function join() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        let emoji = prompt("What is your favorite emoji?");
+        let heading = document.querySelector("h2");
+        if (name.length > 0 && email.length > 0) {
+          heading.innerHTML =
+            "Welcome, " +
+            name +
+            "!" +
+            emoji +
+            " Now you are a part of our community!";
+        } else {
+          alert(
+            "Hey! We need at least your name and e-mail to register you 😉"
+          );
+        }
+      }
+
+      let joinButton = document.querySelector(".join-button");
+      joinButton.addEventListener("click", join);
+    </script>
+  </body>
+</html>
